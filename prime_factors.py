@@ -2,10 +2,12 @@ class PrimeFactor:
     def of(self, number):
         factors = []
 
-        if 3 >= number >= 2:
-            factors.append(number)
-        elif number >= 4:
-            factors = [2, 2]
-
+        if number > 1:
+            if number == 4:
+                while number % 2 == 0:
+                    number = number // 2
+                    factors.append(2)
+            else:
+                factors.append(number)
 
         return factors
